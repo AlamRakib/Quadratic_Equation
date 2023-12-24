@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="myequation"
+            type="com.example.quadraticequation.MyEquation" />
+    </data>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/equation"
+        android:scaleType="centerCrop"
+        >
+
+    </ImageView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:text="@={myequation.a}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a"
+            android:layout_marginTop="250dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_margin="20dp"
+            >
+
+        </EditText>
+
+        <EditText
+            android:text="@={myequation.b}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter b"
+            android:layout_marginTop="250dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_margin="20dp"
+            >
+
+        </EditText>
+
+        <EditText
+            android:text="@={myequation.c}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter c"
+            android:layout_marginTop="250dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_margin="20dp"
+            >
+
+        </EditText>
+
+        <Button
+            android:onClick="@{myequation::solveEquation}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Solve"
+            >
+
+        </Button>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Solution"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</layout>
